@@ -1,3 +1,3 @@
-api_key = ""
-api_key_secret = ""
-bearer_token =""
+api_key = "4E9fAWVOH3CkQimcaNs16bt7D"
+api_key_secret = "1mcx9BJsHnkGGCZ7uDmkPD8kSR5hUlwviiBnh6za055QnsmVBr"
+bearer_token ="AAAAAAAAAAAAAAAAAAAAAGmCFwEAAAAAj2OMhdkhpIc0noiz1OU7%2FrYw4%2F8%3DxCF24YWN7xIcsg5jfrfPP0lctBaPCaF1JRBQ6dMYIyIZ8vH4zM"

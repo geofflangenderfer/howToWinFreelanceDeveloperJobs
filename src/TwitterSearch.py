@@ -7,7 +7,7 @@ class TwitterSearch():
 
     def __init__(self):
         self.headers = {"Authorization": f"Bearer {auth.credentials.bearer_token}"}
-        self.url = "https://api.twitter.com/2/tweets/search/recent?query=from:g_langenderfer"
+        self.url = "https://api.twitter.com/2/tweets/search/recent?query=from:ev"
         self.tweets = self.get_tweets()
 
     def get_tweets(self):

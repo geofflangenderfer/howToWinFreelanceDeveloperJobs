@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import TwitterSearch
+from Tweet import Tweet 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -17,9 +18,6 @@ class SaveTweets():
 
         session.commit()
 
-        for db_row in session.query(Tweet).order_by(Tweet.id):
-            print(db_row.id, db_row.text)
-
         session.close()
 
     def start_db_session(self):
@@ -31,3 +29,5 @@ class SaveTweets():
 if __name__ == '__main__':
     search = TwitterSearch.TwitterSearch()
     test = SaveTweets(search.tweets)
+    for tweet in search.tweets:
+        print(tweet)
