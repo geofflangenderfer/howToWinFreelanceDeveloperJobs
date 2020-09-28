@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import base64
 import requests
 import urllib.parse
@@ -23,13 +24,12 @@ def get_bearer_token(consumer_key, consumer_secret):
 
     response = requests.post(OAUTH2_TOKEN, headers=headers, data={'grant_type': 'client_credentials'})
     to_json = response.json()
-    print("token_type = %s\naccess_token  = %s" % (to_json['token_type'], to_json['access_token']))
+    print(f"{to_json['access_token']}")
 
 
 def main():
     consumer_key = credentials.api_key
     consumer_secret = credentials.api_key_secret
-    print("***** ***** ***** *****")
     get_bearer_token(consumer_key, consumer_secret)
 
 

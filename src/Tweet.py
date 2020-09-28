@@ -10,5 +10,4 @@ class Tweet(Base):
     author = Column(String)
 
     def __repr__(self):
-       return "<Tweet (text='%s', author='%s')>" % (
-                            self.text, self.author)
+       return "<Tweet (id='%s', text='%s', author='%s')>" % (self.id, self.text, self.author)
