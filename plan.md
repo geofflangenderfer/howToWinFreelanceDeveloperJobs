@@ -8,7 +8,11 @@ We'll build with the required tech stack because it will make us a low risk hire
 
 ## Gameplan
 + connect to twitter API (ugly)
-- object-oriented refactor (pretty)
-- airflow for weekly rerunning 
++ object-oriented refactor (pretty)
+- add task and automate
+  + add tweet.fields:
+    + created_at
+  + add number_emojis database table
+  - airflow for weekly rerunning 
 - docker for easy deployment
 - deploy app to aws

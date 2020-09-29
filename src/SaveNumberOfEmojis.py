@@ -1,22 +1,25 @@
 #!/usr/bin/env python3
-import TwitterSearch
-from Tweet import Tweet, Base
+from NumberOfEmojis import NumberOfEmojis, Base
+from CalculateEmojis import CalculateEmojis
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-class SaveTweets():
-    def __init__(self, tweets):
+class SaveNumberOfEmojis():
+    def __init__(self, number_of_emojis):
         self.connection_string= "postgresql+psycopg2://postgres:postgres@localhost:5432/tweets"
-        self.tweets = tweets
-        self.save_tweets()
+        self.number_of_emojis = number_of_emojis
+        self.save_number_of_emojis()
 
-    def save_tweets(self):
+    def save_number_of_emojis(self):
         session = self.start_db_session()
 
-        for tweet in self.tweets:
-            session.add(tweet)
+        for emoji in self.number_of_emojis:
+            session.add(emoji)
 
         session.commit()
+        for emoji in self.number_of_emojis:
+            print(emoji)
+        
 
         session.close()
 
@@ -30,7 +33,7 @@ class SaveTweets():
         return Session()
 
 if __name__ == '__main__':
-    search = TwitterSearch.TwitterSearch()
-    test = SaveTweets(search.tweets)
+    emojis = CalculateEmojis()
+    SaveNumberOfEmojis(emojis.number_of_emojis)
     #for tweet in search.tweets:
     #    print(tweet)
