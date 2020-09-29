@@ -65,6 +65,6 @@ class TwitterSearch():
     
 
 if __name__ == '__main__':
-    test = TwitterSearch('brennandunn')
+    test = TwitterSearch('dvassallo')
     for tweet in test.tweets:
         print(tweet)

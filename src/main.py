@@ -7,6 +7,7 @@ def main():
     for author in authors:
         search = TwitterSearch(author)
         SaveTweets(search.tweets)
+    CalculateTopTen()
 
 if __name__ == '__main__':
     main()
