@@ -16,6 +16,7 @@ We'll build with the required tech stack because it will make us a low risk hire
   - schedule tasks:
     - weekly tweet search
     - update top tweets database
+      - create topemojitweets that updates the tweets with the most emojis
       - naive: sort tweets database for top 10 liked tweets, clear out top tweets db, and post new top 10
     - build hugo blog and push to github/netlify
   - publish to netlify blog
