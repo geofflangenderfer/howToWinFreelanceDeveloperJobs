@@ -30,7 +30,7 @@ class SaveTweets():
         return Session()
 
 if __name__ == '__main__':
-    search = TwitterSearch.TwitterSearch()
-    test = SaveTweets(search.tweets)
-    #for tweet in search.tweets:
-    #    print(tweet)
+    authors = ['paulg', 'r00k', 'brennandunn', 'dvassallo', 'naval']
+    for author in authors:
+        search = TwitterSearch.TwitterSearch(author)
+        SaveTweets(search.tweets)

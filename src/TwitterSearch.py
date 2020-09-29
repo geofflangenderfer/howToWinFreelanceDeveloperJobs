@@ -5,9 +5,10 @@ import requests
 
 class TwitterSearch():
 
-    def __init__(self):
+    def __init__(self, author):
         self.headers = {"Authorization": f"Bearer {auth._credentials.bearer_token}"}
-        self.url = "https://api.twitter.com/2/tweets/search/recent?query=from:hypefury&tweet.fields=created_at"
+        self.url = f"https://api.twitter.com/2/tweets/search/recent?query=from:{author}&tweet.fields=created_at"
+        self.author = author
         self.tweets = self.get_tweets()
 
     def get_tweets(self):
@@ -19,8 +20,7 @@ class TwitterSearch():
             tweets.append(Tweet.Tweet(
                 obj["id"],
                 obj["text"],
-                # TODO: factor out hard coding author
-                'hypefury',
+                self.author,
                 obj["created_at"]
             ))
 
@@ -37,6 +37,6 @@ class TwitterSearch():
     
 
 if __name__ == '__main__':
-    test = TwitterSearch()
+    test = TwitterSearch('paulg')
     for tweet in test.tweets:
         print(tweet)

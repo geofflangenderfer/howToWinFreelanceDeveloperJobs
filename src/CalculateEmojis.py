@@ -56,5 +56,5 @@ class CalculateEmojis():
 
 if __name__ == '__main__':
     test = CalculateEmojis()
-    for emoji in test.number_of_emojis:
-        print(emoji)
+    #for emoji in test.number_of_emojis:
+    #    print(emoji)
