@@ -21,3 +21,11 @@ $ psql -c 'select * from numberofemojis order by number_emojis desc limit 10;' '
  1310968071042068481 |             0
 (10 rows)
 ```
+
+### Tweet URL
+To see the tweet, add the `id` to the end of the following:
+
+```
+twitter.com/i/web/status/
+```
+For example, here's the [first](https://twitter.com/i/web/status/1309986791513038848)
