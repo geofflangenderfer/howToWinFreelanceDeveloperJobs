@@ -2,7 +2,7 @@
 import base64
 import requests
 import urllib.parse
-import credentials
+import _credentials
 
 OAUTH2_TOKEN = 'https://api.twitter.com/oauth2/token'
 
@@ -28,8 +28,8 @@ def get_bearer_token(consumer_key, consumer_secret):
 
 
 def main():
-    consumer_key = credentials.api_key
-    consumer_secret = credentials.api_key_secret
+    consumer_key = _credentials.api_key
+    consumer_secret = _credentials.api_key_secret
     get_bearer_token(consumer_key, consumer_secret)
 
 
